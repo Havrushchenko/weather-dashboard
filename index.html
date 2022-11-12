@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous">
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <header class="container-fluid bg-dark text-center text-white p-3">
         <h1>Weather Dashboard</h1>
@@ -18,16 +22,19 @@
                 <h2 class="mt-1">Search for a City:</h2>
                 <div class="input-group mb-3">
                     <input id="search-city" class="form-control" placeholder="Enter a City">
-                    <button id="search-button" class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg></button>
+                    <button id="search-button" class="btn btn-primary" type="button"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
                 </div>
                 <button id="clear-history" class="btn btn-primary" type="button">Clear History</button>
                 <form id="history"></form>
             </div>
-            <div class="col-lg-9">
+            <div class="col-12 col-md-9">
                 <div class="row mr-0">
-                    <div class="col-lg-11 card m-4" id="today-weather">
+                    <div class="col-lg-11 m-4 d-none" id="today-weather">
                         <div class="card-body">
                             <h3 id="city-name" class="city-name align-middle"></h3>
                             <img id="icon">
@@ -38,17 +45,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="row d-none" id="fiveday-header">
+                <div class="row d-none" id="forecast">
                     <div class="col-12">
                         <h3>5-Day Forecast</h3>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                    <div class="row">
+                        <div class="col-md-2 bg-primary text-white m-2 rounded">
+                            <img id="icon-day-one">
+                            <p id="temperature-day-one"></p>
+                            <p id="humidity-day-one"></p>
+                        </div>
+                        <div class="col-md-2 bg-primary text-white m-2 rounded">
+                            <img id="icon-day-two">
+                            <p id="temperature-day-two"></p>
+                            <p id="humidity-day-two"></p>
+                        </div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded">
+                            <img id="icon-day-three">
+                            <p id="temperature-day-three"></p>
+                            <p id="humidity-day-three"></p>
+                        </div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded">
+                            <img id="icon-day-four">
+                            <p id="temperature-day-four"></p>
+                            <p id="humidity-day-four"></p>
+                        </div>
+                        <div class="col-md-2 forecast bg-primary text-white m-2 rounded">
+                            <img id="icon-day-five">
+                            <p id="temperature-day-five"></p>
+                            <p id="humidity-day-five"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,4 +83,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
