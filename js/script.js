@@ -46,41 +46,51 @@ function getWeather(searchCity) {
             forecast.classList.remove("d-none");
 
             // Forecast day one
+            var dateDayOne = document.getElementById("date-day-one");
             var iconDayOne = document.getElementById("icon-day-one");
             var temperatureDayOne = document.getElementById("temperature-day-one");
             var humidityDayOne = document.getElementById("humidity-day-one");
+            dateDayOne.textContent = (moment().add(1, 'days').format("MMM Do YY"));
             iconDayOne.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png");
             temperatureDayOne.textContent = "Temp: " + data.list[0].main.temp + " °F";
             humidityDayOne.textContent = "Humid: " + data.list[0].main.humidity + " %"
-            // Forecast day two
 
+            // Forecast day two
+            var dateDayTwo = document.getElementById("date-day-two");
             var iconDayTwo = document.getElementById("icon-day-two");
             var temperatureDayTwo = document.getElementById("temperature-day-two");
             var humidityDayTwo = document.getElementById("humidity-day-two");
+            dateDayTwo.textContent = (moment().add(2, 'days').format("MMM Do YY"));
             iconDayTwo.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png");
             temperatureDayTwo.textContent = "Temp: " + data.list[1].main.temp + " °F";
             humidityDayTwo.textContent = "Humid: " + data.list[1].main.humidity + " %"
-            // Forecast day three
 
+            // Forecast day three
+            var dateDayThree = document.getElementById("date-day-three");
             var iconDayThree = document.getElementById("icon-day-three");
             var temperatureDayThree = document.getElementById("temperature-day-three");
             var humidityDayThree = document.getElementById("humidity-day-three");
+            dateDayThree.textContent = (moment().add(3, 'days').format("MMM Do YY"));
             iconDayThree.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png");
             temperatureDayThree.textContent = "Temp: " + data.list[2].main.temp + " °F";
             humidityDayThree.textContent = "Humid: " + data.list[2].main.humidity + " %"
-            // Forecast day four
 
+            // Forecast day four
+            var dateDayFour = document.getElementById("date-day-four");
             var iconDayFour = document.getElementById("icon-day-four");
             var temperatureDayFour = document.getElementById("temperature-day-four");
             var humidityDayFour = document.getElementById("humidity-day-four");
+            dateDayFour.textContent = (moment().add(4, 'days').format("MMM Do YY"));
             iconDayFour.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[3].weather[0].icon + ".png");
             temperatureDayFour.textContent = "Temp: " + data.list[3].main.temp + " °F";
             humidityDayFour.textContent = "Humid: " + data.list[3].main.humidity + " %"
+
             // Forecast day five
-            
+            var dateDayFive = document.getElementById("date-day-five");
             var iconDayFive = document.getElementById("icon-day-five");
             var temperatureDayFive = document.getElementById("temperature-day-five");
             var humidityDayFive = document.getElementById("humidity-day-five");
+            dateDayFive.textContent = (moment().add(5, 'days').format("MMM Do YY"));
             iconDayFive.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[4].weather[0].icon + ".png");
             temperatureDayFive.textContent = "Temp: " + data.list[4].main.temp + " °F";
             humidityDayFive.textContent = "Humid: " + data.list[4].main.humidity + " %"
