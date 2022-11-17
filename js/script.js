@@ -108,18 +108,18 @@ searchButton.addEventListener("click", function () {
     renderSearchHistory();
 })
 
-// Clear History button
+// Clear history button
 clearEl.addEventListener("click", function () {
     localStorage.clear();
     searchHistory = [];
     renderSearchHistory();
 })
 
+// Render search history function
 function renderSearchHistory() {
     historyEl.innerHTML = "";
     for (let i = 0; i < searchHistory.length; i++) {
         const historyItem = document.createElement("input");
-        historyItem.setAttribute("type", "text");
         historyItem.setAttribute("style", "cursor:pointer");
         historyItem.setAttribute("readonly", true);
         historyItem.setAttribute("class", "form-control d-block bg-white");
@@ -142,7 +142,7 @@ var searchHandler = function (event) {
     if (cityName) {
         getWeather(cityName);
     } else {
-        alert("Please enter a city name!");
+        alert("Please enter a City name!");
     }
     console.log(event);
 }
